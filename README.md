@@ -3,6 +3,10 @@
 - [気象庁｜過去の気象データ検索](https://www.data.jma.go.jp/obd/stats/data/mdrr/man/kansoku_gaiyou.html)
 - [アメダス地点情報履歴ファイル](https://www.data.jma.go.jp/obd/stats/data/mdrr/chiten/meta/amdmaster.index4)をCSV/JSONデータ化
 
+## サンプルアプリ
+
+- [気象庁 地点番号マップ](https://code4fukui.github.io/jma_station/)
+
 ## 使い方
 
 [地点番号データ](https://code4fukui.github.io/jma_station/jma_station.csv) (終了したものも含む地点番号データ)
