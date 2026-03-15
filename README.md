@@ -1,5 +1,7 @@
 # jma_station
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Open data of station numbers from the Japan Meteorological Agency.
 
 ## Demo
