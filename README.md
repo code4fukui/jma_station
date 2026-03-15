@@ -1,15 +1,21 @@
-# jma_station 気象庁 地点番号オープンデータ
+# jma_station
 
-- [気象庁｜過去の気象データ検索](https://www.data.jma.go.jp/obd/stats/data/mdrr/man/kansoku_gaiyou.html)
-- [アメダス地点情報履歴ファイル](https://www.data.jma.go.jp/obd/stats/data/mdrr/chiten/meta/amdmaster.index4)をCSV/JSONデータ化
+Open data of station numbers from the Japan Meteorological Agency.
 
-## サンプルアプリ
+## Demo
+[JMA Station Map](https://code4fukui.github.io/jma_station/)
 
-- [気象庁 地点番号マップ](https://code4fukui.github.io/jma_station/)
+## Features
+- Provides CSV and JSON data on JMA observation stations, including active and discontinued stations
+- Data includes station number, name, coordinates, altitude, and observation data
 
-## 使い方
+## Data / API
+- The data is sourced from the [JMA Past Weather Data Search](https://www.data.jma.go.jp/obd/stats/data/mdrr/man/kansoku_gaiyou.html) and [JMA Automated Meteorological Data Acquisition System (AMeDAS) station information history file](https://www.data.jma.go.jp/obd/stats/data/mdrr/chiten/meta/amdmaster.index4).
 
-[地点番号データ](https://code4fukui.github.io/jma_station/jma_station.csv) (終了したものも含む地点番号データ)
+## Usage
+The data files are available at the following URLs:
+
+[Full station data](https://code4fukui.github.io/jma_station/jma_station.csv)
 ```js
 import { CSV } from "https://js.sabae.cc/CSV.js";
 const data = CSV.toJSON(await CSV.fetch("https://code4fukui.github.io/jma_station/jma_station.csv"));
@@ -20,8 +26,7 @@ const data = await (await fetch("https://code4fukui.github.io/jma_station/jma_st
 console.log(data);
 ```
 
-
-[アクティブな地点番号データ](https://code4fukui.github.io/jma_station/jma_station_active.csv) (終了していない地点番号データ)
+[Active stations only](https://code4fukui.github.io/jma_station/jma_station_active.csv)
 ```js
 import { CSV } from "https://js.sabae.cc/CSV.js";
 const data = CSV.toJSON(await CSV.fetch("https://code4fukui.github.io/jma_station/jma_station_active.csv"));
@@ -32,6 +37,8 @@ const data = await (await fetch("https://code4fukui.github.io/jma_station/jma_st
 console.log(data);
 ```
 
-## 自動更新
+## Automatic Updates
+The data is automatically updated daily at 9:15 JST using a GitHub Actions workflow.
 
-- [scheduled-update.yml](.github/workflows/scheduled-update.yml) 毎日9:15(JST)に更新
+## License
+MIT
