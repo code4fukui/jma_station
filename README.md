@@ -4,9 +4,6 @@
 
 Open data of station numbers from the Japan Meteorological Agency.
 
-## Demo
-[JMA Station Map](https://code4fukui.github.io/jma_station/)
-
 ## Features
 - Provides CSV and JSON data on JMA observation stations, including active and discontinued stations
 - Data includes station number, name, coordinates, altitude, and observation data
@@ -43,4 +40,4 @@ console.log(data);
 The data is automatically updated daily at 9:15 JST using a GitHub Actions workflow.
 
 ## License
-MIT
+MIT License — see [LICENSE](LICENSE).
